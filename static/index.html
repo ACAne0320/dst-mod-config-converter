@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DST Mod Setup Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Don't Starve Together Mod Setup Generator</h1>
+        <div class="input-section">
+            <div class="input-group">
+                <label for="master">Master modoverrides.lua:</label>
+                <textarea id="master" rows="10" placeholder="Paste master modoverrides.lua content here"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="caves">Caves modoverrides.lua:</label>
+                <textarea id="caves" rows="10" placeholder="Paste caves modoverrides.lua content here"></textarea>
+            </div>
+        </div>
+        <button onclick="generateSetup()">Generate Setup</button>
+        <div class="output-section">
+            <label for="result">Generated dedicated_server_mods_setup.lua:</label>
+            <textarea id="result" rows="10" readonly></textarea>
+            <button onclick="copyToClipboard()" id="copyButton">Copy to Clipboard</button>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
