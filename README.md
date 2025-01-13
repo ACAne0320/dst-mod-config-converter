@@ -16,6 +16,25 @@
 3. 点击生成按钮
 4. 复制生成的内容到服务器的 dedicated_server_mods_setup.lua
 
+## 在线使用
+访问：[https://dst-mod-config-converter.vercel.app](https://dst-mod-config-converter.vercel.app)
+
 ## 本地运行
+
+### 方法一：直接运行
 1. 安装Python 3.7+
-2. 安装依赖：
+2. 克隆仓库：
+3. 安装依赖：
+```bash
+pip install -r requirements.txt
+```
+4. 运行服务器：
+访问 http://localhost:8000/static/index.html
+方法二：Docker运行
+1. 安装Docker
+2. 克隆仓库并进入目录
+3. 构建并运行：
+```bash
+docker compose up -d
+```
+访问 http://localhost:8000/static/index.html

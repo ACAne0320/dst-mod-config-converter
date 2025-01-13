@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Form, HTTPException
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
@@ -74,4 +74,4 @@ def generate_mods_setup(master: str = Form(...), caves: str = Form(...)):
 
 @app.get("/")
 def index():
-    return {"message": "Upload your modoverrides.lua content to generate the setup file."}
+    return RedirectResponse(url="/static/index.html")
